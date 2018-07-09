@@ -1,0 +1,51 @@
+unit login;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, sComboBoxes, sSkinProvider, sSkinManager,
+  sButton, sEdit, sLabel, sComboBox;
+
+type
+  TFrlogin = class(TForm)
+    sLabel1: TsLabel;
+    sEdit1: TsEdit;
+    sEdit2: TsEdit;
+    sLabel2: TsLabel;
+    sLabel3: TsLabel;
+    sButton1: TsButton;
+    sButton2: TsButton;
+    sButton3: TsButton;
+    sSkinManager1: TsSkinManager;
+    sSkinProvider1: TsSkinProvider;
+    sSkinSelector1: TsSkinSelector;
+    sComboBox1: TsComboBox;
+    procedure sComboBox1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frlogin: TFrlogin;
+
+implementation
+
+uses AdminPage, daftarbarang, kulakan, detailakun;
+
+{$R *.dfm}
+
+procedure TFrlogin.sComboBox1Click(Sender: TObject);
+begin
+case sComboBox1.ItemIndex of
+    0 : Fradmin.Show;
+    1 : Frdaftarbarang.Show;
+    2 : frkulakan.Show;
+    3 : frdetailakun.show;
+
+
+end;
+end;
+end.

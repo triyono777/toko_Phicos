@@ -1,0 +1,24 @@
+unit penjualan;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, sLabel;
+
+type
+  TFRpenjualan = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRpenjualan: TFRpenjualan;
+
+implementation
+
+{$R *.dfm}
+
+end.
